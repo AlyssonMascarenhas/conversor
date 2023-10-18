@@ -1,0 +1,10 @@
+<header>
+  <app-header [config]="headerConfig"></app-header>
+</header>
+<main>
+  <section class="cards">
+    <app-card [config]="cardCAD" (reload)="reloadCard('cardCAD')"></app-card>
+    <app-card [config]="cardARS" (reload)="reloadCard('cardARS')"></app-card>
+    <app-card [config]="cardGBP" (reload)="reloadCard('cardGBP')"></app-card>
+  </section>
+</main>

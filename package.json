@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "license": "MIT",
     "scripts": {
-        "start": "nx serve",
+        "start": "nx serve --host=0.0.0.0",
         "build": "nx build",
         "test": "nx test",
         "lint": "eslint .",
@@ -44,7 +44,7 @@
         "@nx/workspace": "16.10.0",
         "@schematics/angular": "~16.2.0",
         "@types/jest": "^29.4.0",
-        "@types/node": "16.11.7",
+        "@types/node": "^16.11.7",
         "@typescript-eslint/eslint-plugin": "^5.60.1",
         "@typescript-eslint/parser": "^5.60.1",
         "commitlint": "^17.8.0",

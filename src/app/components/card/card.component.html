@@ -1,0 +1,51 @@
+<header>
+  <h1>{{ config.title || '' }}</h1>
+</header>
+
+<ng-container *ngIf="config.loading; then loading; else loaded"> </ng-container>
+
+<ng-template #loading>
+  <main class="loading">
+    <img src="../../../assets/svgs/loader.svg" alt="Icone de carregamento" />
+  </main>
+</ng-template>
+
+<ng-template #loaded>
+  <ng-container
+    *ngIf="config && config.value; then success; else error"
+  ></ng-container>
+</ng-template>
+
+<ng-template #success>
+  <main [class]="'success ' + setCardClass()">
+    <h3>
+      {{ config.value | currency : 'BRL' : 'symbol' : '1.2-2' }}
+    </h3>
+  </main>
+  <hr />
+  <footer>
+    <section class="variation">
+      <label>
+        {{ config.variation?.title || '' }}
+      </label>
+      <span>
+        {{ config.variation?.value | number : '1.2-2' || '' }}
+      </span>
+    </section>
+    <section class="updated">
+      <label>
+        {{ config.updated?.title || '' }}
+      </label>
+      <span>
+        {{ config.updated?.value || '' }}
+      </span>
+    </section>
+  </footer>
+</ng-template>
+
+<ng-template #error>
+  <main class="error">
+    <h4>Algo deu errado</h4>
+    <button type="button" (click)="click()"><h2>RECARREGAR</h2></button>
+  </main>
+</ng-template>

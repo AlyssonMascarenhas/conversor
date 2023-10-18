@@ -1,1 +1,6 @@
 @import 'styles/index.scss';
+
+body {
+  background: $app-background !important;
+  margin: 0;
+}
