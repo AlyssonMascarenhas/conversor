@@ -33,6 +33,11 @@ describe('HomeComponent', () => {
     expect(homeComponent).toBeTruthy();
   });
 
+  it('should render three cards', () => {
+    const cards = document.getElementsByTagName('app-card');
+    expect(cards).toHaveLength(3);
+  });
+
   it('should load cards on init', () => {
     // @ts-ignore
     jest.spyOn(homeComponent, '_loadCards');
