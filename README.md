@@ -19,9 +19,11 @@ Está é uma aplicação Angular criada com [Nx](https://nx.dev/nx-api/angular),
 - Nx
 - Angular v16.2.0
 - Node.js v18.10.0
+- JEST
 - TypeScript
 - HTML
 - SCSS
+- Docker
 
 ## Instruções para executar o projeto
 
@@ -57,6 +59,40 @@ Certifique-se de ter o Node.js na versão 18.10.0 instalado em sua máquina, cas
   npm start
 ```
 
+6. Acesse o projeto no seu navegador favorito
+
+```
+  http://localhost:4200
+```
+
+### Rodar o projeto usando Docker
+
+Certifique-se de ter o Docker previamente instalado
+
+1. Clone o repositório: <br/>
+
+```
+  git clone https://github.com/AlyssonMascarenhas/conversor/
+```
+
+2. Acesse a pasta do projeto: <br/>
+
+```
+  cd conversor
+```
+
+3. Execute o projeto usando docker
+
+```
+  docker-compose up --build
+```
+
+4. Acesse o projeto no seu navegador favorito
+
+```
+  http://localhost:4200
+```
+
 ## Testes JEST
 
 Caso já tenha feito o clone e instalação de depêndencias do projeto, você pode rodar os testes JESTs com os seguintes comandos:
@@ -76,4 +112,3 @@ Caso já tenha feito o clone e instalação de depêndencias do projeto, você p
 ### Cobertura atual
 
 ![image](https://github.com/AlyssonMascarenhas/conversor/assets/54484070/5ee9a378-e953-479c-9ecf-899e13396115)
-
