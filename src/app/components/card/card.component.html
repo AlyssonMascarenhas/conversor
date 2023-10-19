@@ -1,24 +1,25 @@
 <header>
-  <h1>{{ config.title || '' }}</h1>
+  <h1 data-testid="card-title">{{ config.title || '' }}</h1>
 </header>
 
 <ng-container *ngIf="config.loading; then loading; else loaded"> </ng-container>
 
 <ng-template #loading>
-  <main class="loading">
+  <main class="loading" data-testid="card-loading">
     <img src="../../../assets/svgs/loader.svg" alt="Icone de carregamento" />
   </main>
 </ng-template>
 
 <ng-template #loaded>
   <ng-container
-    *ngIf="config && config.value; then success; else error"
+    *ngIf="config && haveValue(); then success; else error"
+    data-testid="card-loaded"
   ></ng-container>
 </ng-template>
 
 <ng-template #success>
-  <main [class]="'success ' + setCardClass()">
-    <h3>
+  <main data-testid="card-success" [class]="'success ' + setCardClass()">
+    <h3 data-testid="card-value">
       {{ config.value | currency : 'BRL' : 'symbol' : '1.2-2' }}
     </h3>
   </main>
@@ -44,8 +45,10 @@
 </ng-template>
 
 <ng-template #error>
-  <main class="error">
+  <main class="error" data-testid="card-error">
     <h4>Algo deu errado</h4>
-    <button type="button" (click)="click()"><h2>RECARREGAR</h2></button>
+    <button data-testid="card-button-reload" type="button" (click)="click()">
+      <h2>RECARREGAR</h2>
+    </button>
   </main>
 </ng-template>

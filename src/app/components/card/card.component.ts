@@ -38,6 +38,10 @@ export class CardComponent {
     return 'no-class';
   }
 
+  public haveValue(): boolean {
+    return !!(this.config.value || typeof this.config.value === 'number');
+  }
+
   public click(): void {
     this.reload.emit(true);
   }
