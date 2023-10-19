@@ -1,5 +1,5 @@
 <header>
-  <div class="logo" *ngIf="config && config.logo">
+  <div data-testid="header" class="logo" *ngIf="config && config.logo">
     <img [src]="config.logo.src" [alt]="config.logo.alt" />
   </div>
 </header>

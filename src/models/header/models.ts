@@ -5,5 +5,4 @@ export interface HeaderProps {
 export interface HeaderLogoProps {
   alt: string;
   src: string;
-  action?: () => void;
 }

@@ -1,7 +1,8 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { fireEvent, screen } from '@testing-library/angular';
-import { Component, NgModule } from '@angular/core';
+
 import { CardProps } from 'src/models';
 import { CardComponent } from './card.component';
 

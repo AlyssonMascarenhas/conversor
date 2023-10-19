@@ -5,7 +5,7 @@ import { AwesomeAPIService, ServicesModule } from 'src/services';
 import { CardComponent, HeaderComponent } from './../../components';
 import { Subscription, finalize, interval, take } from 'rxjs';
 
-const INTERVAL_RELOAD = 180000;
+export const INTERVAL_RELOAD = 180000;
 
 @Component({
   standalone: true,
@@ -107,6 +107,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.subscriptions$.forEach((subscription$) =>
         subscription$.unsubscribe()
       );
+      this.subscriptions$ = [];
     }
   }
 }
