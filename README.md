@@ -56,3 +56,24 @@ Certifique-se de ter o Node.js na versão 18.10.0 instalado em sua máquina, cas
 ```
   npm start
 ```
+
+## Testes JEST
+
+Caso já tenha feito o clone e instalação de depêndencias do projeto, você pode rodar os testes JESTs com os seguintes comandos:
+
+- Testes
+
+```
+  yarn test
+```
+
+- Testes + Coverage(Será criada uma pasta na raiz do projeto /coverage, e para visualizar o coverage basta abrir o arquivo `index.html` no navegador)
+
+```
+  yarn test:coverage
+```
+
+### Cobertura atual
+
+![image](https://github.com/AlyssonMascarenhas/conversor/assets/54484070/5ee9a378-e953-479c-9ecf-899e13396115)
+
