@@ -2,7 +2,6 @@
 
 <p align="center">
 <a href="https://codeclimate.com/github/AlyssonMascarenhas/conversor/maintainability"><img src="https://api.codeclimate.com/v1/badges/8a3f60f121cc3aad9850/maintainability" /></a>
-<a href="https://codeclimate.com/github/AlyssonMascarenhas/conversor/test_coverage"><img src="https://api.codeclimate.com/v1/badges/8a3f60f121cc3aad9850/test_coverage" /></a>
 </p>
 
 Está é uma aplicação Angular criada com [Nx](https://nx.dev/nx-api/angular), e foi desenvolvida para mostrar a conversão de três moedas em Real Brasileiro(BRL)
